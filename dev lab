@@ -179,3 +179,5 @@ msis@msis:~/cdcapp$
 ghp_ct9U0Duff67DZXtFgsDyfHHRaV40B72G3c6b
 
 https://awsacademy.instructure.com/courses/131612?invitation=mW5mkcT6wwfyJgNqdojvrTDE437qUhx8QnCS1C4v
+kubeadm join 172.18.181.63:6443 --token x1r6kc.s2v5rrx9f7msi1i7 \
+	--discovery-token-ca-cert-hash sha256:2a973941e58cbcabc482161cc42f72e4f07aff1f5795fa2f5ec2f8b0051c1ae0
