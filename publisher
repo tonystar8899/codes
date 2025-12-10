@@ -1,0 +1,15 @@
+Publish the Web Service
+
+package com.example.calculator;
+
+import javax.xml.ws.Endpoint;
+
+public class OperatorPublisher {
+    public static void main(String[] args) {
+        String url = "http://localhost:8080/calculator";
+        Endpoint.publish(url, new OperatorService());
+        System.out.println("Service started at: " + url + "?wsdl");
+    }
+}
+
+Run OperatorPublisher to start the web service, then open http://localhost:8080/calculator?wsdl to verify.
