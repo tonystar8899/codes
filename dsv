@@ -51,3 +51,5 @@ hadoop jar wordcount.jar wordcount /wordcount/input/wordinput/wordcount/output
 8) View Output
 
 hdfs dfs-cat/wordcount/output/part-r-00000
+
+https://chatgpt.com/share/69c4c722-93b4-8324-b3eb-9e0c95900d3e
