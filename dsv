@@ -1,0 +1,53 @@
+Hadoop WordCount - Steps
+
+1) Start Hadoop Services
+
+start-dfs.sh && start-yarn.sh
+
+2) Create Folder in HDFS
+
+hdfs dfs-mkdir /cloud
+
+hdis dfs -ls/
+
+hdfs dfs -mkdir /wordcount
+
+hdfs dfs -mkdir /cloud/input
+
+hdfs dfs -mkdir /cloud/output
+
+3) Create Text File for Input
+
+touch wordinput.
+
+nano wordinput
+
+4) Push File to HDFS
+
+hdfs dfs-put wordinput/wordcount/input
+
+5) Go to Eclipse
+
+Create Java Project (name: wordcount, JRE: Java 8)
+
+Create class: main.java
+
+Add Hadoop JARS:
+
+hadoop-client-core-3.2.1.jar
+
+hadoop-common-3.2.1.jar
+
+Import required libraries
+
+6) Export JAR
+
+Right click project Export JAR file
+
+7) Run Hadoop Job
+
+hadoop jar wordcount.jar wordcount /wordcount/input/wordinput/wordcount/output
+
+8) View Output
+
+hdfs dfs-cat/wordcount/output/part-r-00000
