@@ -32,3 +32,58 @@ enter
 
 cmd
 hadoop dfs -cat /output/*
+
+
+
+
+import matplotlib.pyplot as plt
+
+# Sample Data
+x = [1, 2, 3, 4, 5]
+y = [10, 20, 15, 25, 30]
+
+categories = ['A', 'B', 'C', 'D']
+values = [25, 40, 30, 35]
+
+languages = ['Python', 'Java', 'C++', 'JS']
+sizes = [40, 30, 20, 10]
+
+# Create Figure
+plt.figure(figsize=(12, 10))
+
+# ---------------- BAR PLOT ----------------
+plt.subplot(3, 2, 1)
+plt.bar(categories, values)
+plt.title("Bar Plot")
+
+# ---------------- SCATTER PLOT ----------------
+plt.subplot(3, 2, 2)
+plt.scatter(x, y)
+plt.title("Scatter Plot")
+
+# ---------------- PIE CHART ----------------
+plt.subplot(3, 2, 3)
+plt.pie(sizes, labels=languages, autopct='%1.1f%%')
+plt.title("Pie Chart")
+
+# ---------------- DONUT CHART ----------------
+plt.subplot(3, 2, 4)
+plt.pie(sizes, labels=languages, autopct='%1.1f%%')
+
+# White circle for donut
+centre_circle = plt.Circle((0, 0), 0.70, fc='white')
+fig = plt.gcf()
+fig.gca().add_artist(centre_circle)
+
+plt.title("Donut Chart")
+
+# ---------------- LINE PLOT ----------------
+plt.subplot(3, 2, 5)
+plt.plot(x, y, marker='o')
+plt.title("Line Plot")
+
+# Adjust Layout
+plt.tight_layout()
+
+# Show All Plots
+plt.show()
