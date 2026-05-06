@@ -1,0 +1,34 @@
+run as admin ---cmd
+start-all.cmd
+jps to check service
+crome-9870 port
+
+
+
+cmd
+hadoop fs -mkdir /input
+open hadoop and check for file
+go to documents--create a new folder(files) and  text file with name page1--fill it with data
+copy the path of text file
+cmd
+hadoop fs -put path /input
+hadoop fs -ls /input
+
+
+exclipse
+new--java proj--MApReduceWordCount
+select jre
+save
+new package --com.mapreduce.wc
+selct folder and right click build path and add all external jars from share --client,common,lib yarn, mapreduce,hdfs apply and close
+go to package and new class WordCount --finish
+paste the code 
+go to project and export as java-jar
+
+copy the jar file path
+cmd 
+hadoop jar path com.mapreduce.wc/WordCount /input.page1.txt /output
+enter
+
+cmd
+hadoop dfs -cat /output/*
